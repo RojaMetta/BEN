@@ -1,0 +1,19 @@
+<div class="single_category  wow fadeInDown">
+    <div class="category_title"> <a href="">Technology News</a></div>
+    <div class="single_category_inner">
+      <ul class="catg_nav catg_nav2">
+        <li *ngFor="let news of technologyList | paginate: { itemsPerPage: 10, currentPage: page, totalItems:totalLength }">
+          <div class="catgimg_container"> <a class="catg1_img" href={{news.url}}><img src="{{news.urlToImage}}" alt=""> </a></div>
+          <a class="catg_title" href="#"> {{news.title}} </a>
+          <div class="sing_commentbox">
+            <p><i class="fa fa-calendar"></i>{{news.publishedAt}}</p>
+            </div>
+          <p class="post-summary">{{news.description}}</p>
+          <div>
+            <button type="button" (click)="addNews(news)" class="btn btn-info float-right">Add</button>
+          </div>
+       </li>
+      </ul>
+    </div>
+    <pagination-controls class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
+  </div>

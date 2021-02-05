@@ -1,0 +1,10 @@
+1. Make sure you have mysql and mongodb install in your local system.
+2. before running the authenticate and favs spring boot application please start the mysql and mongodb servers.
+3. if an error occurs during running the authenticate spring boot application please check the username and password of the mysql server in application.properties file availbale in the resources folder, and also make sure the given database is created in the mysql of your local system.
+4. After succesfully running the Spring boot applications, open hcr-master folder in the Visual Studio Code and install node modules, then run the application using ng serve command.
+5. Go to the browser and navigate to http://localhost:4200/.
+6. You can see the home page of the newsapp and can navigate to your category of news.
+7. If you want to add the news to your favorites section you have to be logged in first, so go for sign up if you do not have an account and then login using your credentials given during sign up.
+8. you can then go for adding news to your favorites section.
+9. you can also search for news using the search bar give atop of the page.
+10. Enjoy reading all the news from different sources from all over the world.

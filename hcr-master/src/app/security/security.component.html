@@ -1,0 +1,79 @@
+<!-- <div class="col-md-12">
+    <div class="card card-container">
+         <img id="profile-img" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" class="profile-img-card" />
+      <form  name="form"  #f="ngForm" novalidate> 
+
+
+
+        <div class="form-group">
+            <div class="input-group ">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Security Questions</label>
+                    <label class="input-group-text" for="inputGroupSelect01">Question 1*</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose a question here.....</option>
+                    <option value="1">What was your childhood nickname ?</option>
+                    <option value="2">Your favourite Food ?</option>
+                    <option value="3">Name of your bestfriend?</option>
+                    <option value="4">What was your first phone number?</option>
+                    <option value="5">Who is your favourite author?</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group ">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Question 2*</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose a question here.....</option>
+                    <option value="1">What was your childhood nickname ?</option>
+                    <option value="2">Your favourite Food ?</option>
+                    <option value="3">Name of your bestfriend?</option>
+                    <option value="4">What was your first phone number?</option>
+                    <option value="5">Who is your favourite author?</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <a class="btn btn-link" routerLink="/reset-password" routerLinkActive="active"><button
+                    class="btn btn-primary btn-block">Reset Password</button></a>
+        </div>
+
+        </form>
+
+
+    </div>
+</div> -->
+
+ <div class="col-md-12">
+    <div class="card card-container">
+        <form (ngSubmit)="evaluate()">
+            <div class="form-group">
+            <div class="input-group ">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Security Questions</label>
+                    <label class="input-group-text" for="inputGroupSelect01">Question 1</label>
+                </div>
+                <p>{{question1}}
+                </p>
+                <input name="ans1" [(ngModel)]="answer1" type="text" class="form-control" id="q1" placeholder="Type your answer here" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group ">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Question 2</label>
+                </div>
+                <p>{{question2}}</p>
+                <input name="ans2" [(ngModel)]="answer2" type="text" class="form-control" id="q2" placeholder="Type your answer here" />
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <a class="btn btn-link"><button
+                    class="btn btn-primary btn-block">Reset Password</button></a>
+        </div>
+        </form>
+    </div>
+</div> 

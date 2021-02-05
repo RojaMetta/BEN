@@ -1,0 +1,22 @@
+.category_three_fourarea{
+float:center; display:inline; width:225%
+}
+.btn{
+    float: right;
+    padding-right: 30px;
+}
+.btn:after{
+    
+        content: '\f004';
+        font-family: FontAwesome;
+        padding-left: 10px;
+}
+.media-body{
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.post-summary{
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}

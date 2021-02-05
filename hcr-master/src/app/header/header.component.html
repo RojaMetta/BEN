@@ -1,0 +1,75 @@
+<header id="header">
+  <div class="header_top">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+            aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span
+              class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav custom_nav">
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="#" routerLink="favourites">Favourites</a></li>
+            <li><a href="#">Contact</a></li>
+            <li>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Categories
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="business">Business</a><br>
+                  <a class="dropdown-item" href="entertainment">Entertainment</a><br>
+                  <a class="dropdown-item" href="general">General</a><br>
+                  <a class="dropdown-item" href="health">Health</a><br>
+                  <a class="dropdown-item" href="sports">Sports</a><br>
+                  <a class="dropdown-item" href="science">Science</a><br>
+                  <a class="dropdown-item" href="technology">Technology</a><br>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+    <div>
+      <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+        <li class="nav-item ">
+          <button type="button" class="btn"><a href="/register" class="nav-link" routerLink="register">Sign Up</a></button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn"><a href="/login" class="nav-link" routerLink="login">Login</a></button>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+       <!-- <li class="nav-item">
+          <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+        </li> -->
+        <li class="nav-item">
+          <a href class="nav-link" (click)="logout()">LogOut</a>
+        </li>
+      </ul>      
+    </div>
+    <div class="header_search">
+      <button id="searchIcon"><i class="fa fa-search"></i></button>
+      <div id="shide">
+        <div id="search-hide">
+          <form name="form" (ngSubmit)="result()">
+            <input name="query" [(ngModel)]="form.query" type="text" size="40" placeholder="Search here ...">
+          </form>
+          <button  class="remove"><span><i class="fa fa-times"></i></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header_bottom">
+    <div class="logo_area"><a class="logo" href="#"><b>N</b>ewsGlobal <span>News from all over the world</span></a>
+    </div>
+    <div class="top_addarea"><a href="#"><img src="assets/images/banner2.png" alt=""></a></div>
+  </div>
+</header>

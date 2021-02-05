@@ -1,0 +1,17 @@
+<div class="single_category  wow fadeInDown">
+  <div *ngIf="!isActive" class="category_title"><a href="">Please Log in First!</a></div>
+    <div *ngIf="isActive" class="category_title"> <a href="">Favorites</a></div>
+    <div class="single_category_inner">
+      <ul *ngIf="isActive" class="catg_nav catg_nav2">
+        <li *ngFor="let news of newsList | paginate: { itemsPerPage: 11, currentPage: page, totalItems:totalLength }">
+          <div class="catgimg_container"> <a class="catg1_img" href="{{news.url}}"> <img src="{{news.urlToImage}}" alt=""> </a></div>
+          <a class="catg_title" href="#"> {{news.title}}e</a>
+          <div class="sing_commentbox">
+            <p><i class="fa fa-calendar"></i>{{news.publishedAt}}</p>
+            </div>
+          <p class="post-summary">{{news.description}}</p>
+       </li>
+      </ul>
+    </div>
+    <pagination-controls *ngIf="isActive" class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
+  </div>
